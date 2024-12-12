@@ -61,7 +61,7 @@ export default function ArtistsPage() {
   )
 }
 
-function ArtistCard({ name, genre, category }) {
+function ArtistCard({ name, genre, category }:any) {
   return (
     <Card>
       <CardHeader>
