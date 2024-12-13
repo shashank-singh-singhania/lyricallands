@@ -60,13 +60,13 @@ export default function Home() {
       <section className="grid md:grid-cols-3">
         {/* Don't Wanna Camp Section */}
         <div className="bg-[#ffa726] p-12 text-center">
-          <h2 className="text-3xl font-extrabold mb-4 text-[#1e1e1e]">WANT PLACE TO STAY?</h2>
+          <h2 className="text-3xl font-extrabold mb-4 text-[#1e1e1e]">THE ARTISTS LIST</h2>
           <p className="mb-6 text-[#1e1e1e] font-bold">Secure exclusive hotels and rates today.</p>
           <Link
-            href="/hotels"
+            href="/artists"
             className="inline-block text-[#1e1e1e] hover:text-[#1e1e1e]/70 underline underline-offset-4 font-bold"
           >
-            BOOK HOTEL →
+            OUR PERFORMERS →
           </Link>
         </div>
 
@@ -77,10 +77,10 @@ export default function Home() {
             We got you - check out the help center for answers to all your questions.
           </p>
           <Link
-            href="/help"
+            href="/contact"
             className="inline-block text-[#1e1e1e] hover:text-[#1e1e1e]/70 underline underline-offset-4 font-bold"
           >
-            VIEW THE HELP CENTER →
+            CONTACT US →
           </Link>
         </div>
 
@@ -89,7 +89,7 @@ export default function Home() {
           <h2 className="text-3xl font-extrabold mb-4 text-[#1e1e1e]">MONDAY MERCH DEALS</h2>
           <p className="mb-6 text-[#1e1e1e] font-bold">Available through 12/10 while supplies last!</p>
           <Link
-            href="/merch"
+            href="/merchandise"
             className="inline-block text-[#1e1e1e] hover:text-[#1e1e1e]/70 underline underline-offset-4 font-bold"
           >
             BUY MERCH →
@@ -170,7 +170,13 @@ export default function Home() {
         <h2 className="text-4xl md:text-5xl font-extrabold text-white opacity-20 leading-tight">
           SONIC FEST IS A<br />MUSICAL FESTIVAL
         </h2>
+
+  
       </section>
+
+      <footer className="bg-[#1e1e1e] text-center py-8">
+        <p className="text-sm text-[#7ed321]">© 2025 LyricalLands. All rights reserved.</p>
+      </footer>
     </div>
   )
 }
