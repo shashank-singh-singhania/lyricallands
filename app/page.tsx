@@ -61,7 +61,7 @@ export default function Home() {
         {/* Don't Wanna Camp Section */}
         <div className="bg-[#ffa726] p-12 text-center">
           <h2 className="text-3xl font-extrabold mb-4 text-[#1e1e1e]">THE ARTISTS LIST</h2>
-          <p className="mb-6 text-[#1e1e1e] font-bold">Secure exclusive hotels and rates today.</p>
+          <p className="mb-6 text-[#1e1e1e] font-bold">List of our Singers.</p>
           <Link
             href="/artists"
             className="inline-block text-[#1e1e1e] hover:text-[#1e1e1e]/70 underline underline-offset-4 font-bold"

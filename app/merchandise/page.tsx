@@ -17,12 +17,12 @@ interface Product {
 }
 
 const products: Product[] = [
-  { id: 1, name: "Sonic Fest Logo T-Shirt", price: 25, image: "https://thebanyantee.com/cdn/shop/files/Baby-Pink-T-shirt_599c6286-77e0-45aa-9ea3-ab92f4e2bea1.jpg?v=1721381182&width=1920", sizes: ["S", "M", "L", "XL"] },
-  { id: 2, name: "Festival Lineup Hoodie", price: 45, image: "https://www.redwolf.in/image/cache/catalog/hoodies/marvel-loki-master-of-mischief-hoodie-india-back-600x800.jpg?m=1703072566", sizes: ["S", "M", "L", "XL"] },
-  { id: 3, name: "Neon Glow Tank Top", price: 20, image: "https://img.freepik.com/premium-photo/slim-man-tank-top-neon-manga-art-design-with-bold-colors-simple-glow-art-design-tshirt-tattoo_655090-3295141.jpg", sizes: ["S", "M", "L"] },
-  { id: 4, name: "Sonic Fest Snapback", price: 30, image: "https://static.nbastore.in/resized/900X900/55/chicago-bulls-champions-patch-black-9fifty-snapback-cap-black-651e69098c617.jpg", sizes: ["One Size"] },
-  { id: 5, name: "Limited Edition Poster", price: 15, image: "https://i.pinimg.com/736x/c8/f6/c3/c8f6c33c1c74c071561bfef325442c9d.jpg", sizes: ["18x24"] },
-  { id: 6, name: "Festival Bandana", price: 10, image: "https://i.etsystatic.com/12089475/r/il/60e229/4243791634/il_300x300.4243791634_sms2.jpg", sizes: ["One Size"] },
+  { id: 1, name: "Sonic Fest Logo T-Shirt", price: 250, image: "https://thebanyantee.com/cdn/shop/files/Baby-Pink-T-shirt_599c6286-77e0-45aa-9ea3-ab92f4e2bea1.jpg?v=1721381182&width=1920", sizes: ["S", "M", "L", "XL"] },
+  { id: 2, name: "Festival Lineup Hoodie", price: 450, image: "https://www.redwolf.in/image/cache/catalog/hoodies/marvel-loki-master-of-mischief-hoodie-india-back-600x800.jpg?m=1703072566", sizes: ["S", "M", "L", "XL"] },
+  { id: 3, name: "Neon Glow Tank Top", price: 200, image: "https://img.freepik.com/premium-photo/slim-man-tank-top-neon-manga-art-design-with-bold-colors-simple-glow-art-design-tshirt-tattoo_655090-3295141.jpg", sizes: ["S", "M", "L"] },
+  { id: 4, name: "Sonic Fest Snapback", price: 300, image: "https://static.nbastore.in/resized/900X900/55/chicago-bulls-champions-patch-black-9fifty-snapback-cap-black-651e69098c617.jpg", sizes: ["One Size"] },
+  { id: 5, name: "Limited Edition Poster", price: 150, image: "https://i.pinimg.com/736x/c8/f6/c3/c8f6c33c1c74c071561bfef325442c9d.jpg", sizes: ["18x24"] },
+  { id: 6, name: "Festival Bandana", price: 100, image: "https://i.etsystatic.com/12089475/r/il/60e229/4243791634/il_300x300.4243791634_sms2.jpg", sizes: ["One Size"] },
 ]
 
 export default function MerchandisePage() {
@@ -70,7 +70,7 @@ export default function MerchandisePage() {
                   </div>
                   <div className="p-6">
                     <h3 className="text-xl font-bold text-[#ffd700] mb-2">{product.name}</h3>
-                    <p className="text-lg mb-4">${product.price.toFixed(2)}</p>
+                    <p className="text-lg mb-4">₹{product.price.toFixed(2)}</p>
                     <div className="flex items-center gap-4">
                       <Select>
                         <SelectTrigger className="w-[180px] bg-[#3a3a3a] border-[#7ed321]">
@@ -110,7 +110,7 @@ export default function MerchandisePage() {
                 {cart.map((item) => {
                   const product = products.find(p => p.id === item.id)
                   return product ? (
-                    <div key={`${item.id}-${item.size}`} className="flex items-center justify-between bg-[#3a3a3a] p-4 rounded-lg">
+                    <div key={`₹{item.id}-₹{item.size}`} className="flex items-center justify-between bg-[#3a3a3a] p-4 rounded-lg">
                       <div className="flex items-center gap-4">
                         <Image
                           src={product.image}
@@ -140,13 +140,13 @@ export default function MerchandisePage() {
                           className="w-16 bg-[#4a4a4a] border-[#7ed321] text-white"
                           min="1"
                         />
-                        <p>${(product.price * item.quantity).toFixed(2)}</p>
+                        <p>₹{(product.price * item.quantity).toFixed(2)}</p>
                       </div>
                     </div>
                   ) : null
                 })}
                 <div className="text-right text-xl font-bold">
-                  Total: ${cart.reduce((total, item) => {
+                  Total: ₹{cart.reduce((total, item) => {
                     const product = products.find(p => p.id === item.id)
                     return total + (product ? product.price * item.quantity : 0)
                   }, 0).toFixed(2)}

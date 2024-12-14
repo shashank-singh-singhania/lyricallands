@@ -64,7 +64,8 @@ export default function LineupPage() {
           <TabsContent value="lineup" className="mt-8">
             <div className="relative aspect-[1/1.4] w-full max-w-4xl mx-auto">
               <Image
-                src="https://static.wixstatic.com/media/23c86e_11e9f32b1d454201b5e0db981d614554~mv2.jpg/v1/fill/w_1080,h_1350,al_c,q_85,enc_avif,quality_auto/E24_day-by-day_portrait%20(1).jpg"
+                // src="https://static.wixstatic.com/media/23c86e_11e9f32b1d454201b5e0db981d614554~mv2.jpg/v1/fill/w_1080,h_1350,al_c,q_85,enc_avif,quality_auto/E24_day-by-day_portrait%20(1).jpg"
+                src="https://i.postimg.cc/hjYtRyQJ/lineup.jpg"
                 alt="2024 Lineup"
                 fill
                 className="object-contain"
